@@ -283,6 +283,7 @@ public abstract class TestWriteAvroResult {
         fields.add(new RecordField("float", RecordFieldType.FLOAT.getDataType()));
         fields.add(new RecordField("boolean", RecordFieldType.BOOLEAN.getDataType()));
         fields.add(new RecordField("bytes", RecordFieldType.ARRAY.getArrayDataType(RecordFieldType.BYTE.getDataType())));
+        fields.add(new RecordField("fixed", RecordFieldType.ARRAY.getArrayDataType(RecordFieldType.BYTE.getDataType())));
         fields.add(new RecordField("nullOrLong", RecordFieldType.LONG.getDataType()));
         fields.add(new RecordField("array", RecordFieldType.ARRAY.getArrayDataType(RecordFieldType.INT.getDataType())));
         fields.add(new RecordField("record", subRecordDataType));
@@ -302,6 +303,7 @@ public abstract class TestWriteAvroResult {
         values.put("float", 1.23456F);
         values.put("boolean", true);
         values.put("bytes", AvroTypeUtil.convertByteArray("hello".getBytes()));
+        values.put("fixed", AvroTypeUtil.convertByteArray("fixed of sixteen".getBytes()));
         values.put("nullOrLong", null);
         values.put("array", new Integer[] {1, 2, 3});
         values.put("record", innerRecord);

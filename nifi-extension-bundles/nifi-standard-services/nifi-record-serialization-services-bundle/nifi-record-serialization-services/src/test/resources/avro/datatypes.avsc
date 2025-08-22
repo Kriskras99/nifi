@@ -28,6 +28,13 @@
       "name": "nullOrLong",
       "type": [ "null", "long" ]
     }, {
+      "name": "fixed",
+      "type": {
+        "type": "fixed",
+        "size": 16,
+        "name": "fixed16"
+      }
+    }, {
       "name": "array",
       "type" : {
       	"type": "array",
